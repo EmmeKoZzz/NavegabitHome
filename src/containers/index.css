@@ -20,6 +20,10 @@
 	@apply hover:border-b-2 border-white h-full items-center flex;
 }
 
+.FormInput {
+	@apply transition-all duration-300 w-full text-black rounded-[0.375rem] focus:ring-offset-[#b6c7d6] focus:ring-[#b6c7d6] focus:border-[#86b7fe] focus:ring-offset-[0.1rem] 
+}
+
 body,
 HTML {
 	width: 100%;

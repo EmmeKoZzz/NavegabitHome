@@ -6,9 +6,6 @@ interface FormInputProps {
   inputStyle?: string;
 }
 
-export const inputStyle =
-  "transition-all duration-300 w-full text-black rounded-[0.375rem] focus:ring-offset-[#b6c7d6] focus:ring-[#b6c7d6] focus:border-[#86b7fe] focus:ring-offset-[0.1rem] ";
-
 export const FormInput = (props: FormInputProps) => {
   let input;
   let label;
@@ -25,18 +22,18 @@ export const FormInput = (props: FormInputProps) => {
     );
 
   input =
-    props.type === "textarea" ? (
-      <textarea
-        placeholder={props.placeholder}
-        className={inputStyle + props.inputStyle}
-      />
-    ) : (
-      <input
-        type={props.type}
-        placeholder={props.placeholder}
-        className={inputStyle + props.inputStyle}
-      />
-    );
+		props.type === "textarea" ? (
+			<textarea
+				placeholder={props.placeholder}
+				className={`FormInput ${props.inputStyle}`}
+			/>
+		) : (
+			<input
+				type={props.type}
+				placeholder={props.placeholder}
+				className={`FormInput ${props.inputStyle}`}
+			/>
+		);
 
   return (
     <>
