@@ -1,13 +1,16 @@
-import { FormInput } from "../../../Components/FormInput";
+import FormInput from '../../../Components/FormInput';
 
-const IssueFormFooter = () => {
+function IssueFormFooter() {
   return (
-    <>
-      <div className="w-full">
-        <FormInput type={"text"} label={"Asunto"} />
-        <FormInput type={"textarea"} label={"Mensaje"} inputStyle={"h-20"} />
-      </div>
-    </>
+    <div className="w-full">
+      <FormInput type="text" id="asuntoInp" label="Asunto" />
+      <FormInput
+        type="textarea"
+        id="mensageInp"
+        label="Mensaje"
+        inputStyle="h-20"
+      />
+    </div>
   );
-};
+}
 export default IssueFormFooter;

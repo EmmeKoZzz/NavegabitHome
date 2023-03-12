@@ -1,17 +1,12 @@
-import React from "react";
-import logoLight from "../../assets/Logos/dark.webp";
-import NavBarMenu from "./components/NavBarMenu";
-import NavBarSearch from "./components/NavBarSearch";
+import logoLight from '../../assets/Logos/dark.webp';
+import NavBarMenu from './components/NavBarMenu';
+import NavBarSearch from './components/NavBarSearch';
 
-const Header = () => {
+function Header() {
   const logo = (
     <img src={logoLight} alt="logo" className="w-[200px] h-auto inline-block" />
   );
 
-  const ButtonToggler = (
-    <button></button>
-  )
-  
   return (
     <header className="fixed top-0 left-0 w-full z-[1000]">
       <nav className="top-0 sticky z-[1020] lg:flex-nowrap lg:justify-start flex flex-wrap justify-between p-0 bg-primary opacity-80">
@@ -21,7 +16,7 @@ const Header = () => {
           {/*
             NavBarSupport
           */}
-          
+
           <div className="lg:flex lg:basis-auto hidden basis-full grow h-full">
             <NavBarMenu />
             <div className="flex pr-3 justify-between">
@@ -32,6 +27,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

@@ -1,47 +1,35 @@
-interface FormInputProps {
+type FormInputProps = {
   type: string;
-  placeholder?: string;
+  id: string;
   label?: string;
-  labelStyle?: string;
+  placeholder?: string;
   inputStyle?: string;
-}
+  labelStyle?: string;
+};
 
-export const inputStyle =
-  "transition-all duration-300 w-full text-black rounded-[0.375rem] focus:ring-offset-[#b6c7d6] focus:ring-[#b6c7d6] focus:border-[#86b7fe] focus:ring-offset-[0.1rem] ";
+function FormInput({
+  type,
+  id,
+  label,
+  placeholder,
+  inputStyle,
+  labelStyle,
+}: FormInputProps) {
+  const style = `inputStyle ${inputStyle}`;
 
-export const FormInput = (props: FormInputProps) => {
-  let input;
-  let label;
-
-  console.log(props.label);
-
-  label =
-    props.label !== undefined ? (
-      <label className={"w-full text-footer-text" + " " + props.labelStyle}>
-        {props.label}
-      </label>
+  const input =
+    type === 'textarea' ? (
+      <textarea placeholder={placeholder} id={id} className={style} />
     ) : (
-      ""
-    );
-
-  input =
-    props.type === "textarea" ? (
-      <textarea
-        placeholder={props.placeholder}
-        className={inputStyle + props.inputStyle}
-      />
-    ) : (
-      <input
-        type={props.type}
-        placeholder={props.placeholder}
-        className={inputStyle + props.inputStyle}
-      />
+      <input type={type} placeholder={placeholder} id={id} className={style} />
     );
 
   return (
-    <>
+    <label htmlFor={id} className={`w-full text-footer-text ${labelStyle}`}>
       {label}
       {input}
-    </>
+    </label>
   );
-};
+}
+
+export default FormInput;

@@ -1,9 +1,15 @@
-export const LinkSecondary = ({ className, children, ...props }: any) => {
+import { AnchorHTMLAttributes } from 'react';
+
+function LinkSecondary({
+  href,
+  className,
+  children,
+}: AnchorHTMLAttributes<string>) {
   return (
-    <>
-      <a {...props} className={"text-footer-text hover:underline " + className}>
-        {children}
-      </a>
-    </>
+    <a href={href} className={`text-footer-text hover:underline ${className}`}>
+      {children}
+    </a>
   );
 }
+
+export default LinkSecondary;
