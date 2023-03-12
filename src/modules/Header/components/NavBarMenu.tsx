@@ -1,7 +1,7 @@
-import NavBarItem from "./Navbarmenu/NavBarItem";
-import DropDownMenu from "./Navbarmenu/DropDownMenu";
+import NavBarItem from './Navbarmenu/NavBarItem';
+import DropDownMenu from './Navbarmenu/DropDownMenu';
 
-const NavBarMenu = () => {
+function NavBarMenu() {
   return (
     <form
       action=""
@@ -14,6 +14,6 @@ const NavBarMenu = () => {
       <NavBarItem name="Contactos" href="#" />
     </form>
   );
-};
+}
 
 export default NavBarMenu;

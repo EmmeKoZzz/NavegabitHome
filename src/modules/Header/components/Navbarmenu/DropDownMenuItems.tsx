@@ -1,4 +1,9 @@
-export const DropDownMenuItem = ({ name, href }: DropDownMenuItem) => {
+interface DropDownMenuItemProps {
+  name: string;
+  href?: string;
+}
+
+export function DropDownMenuItem({ name, href }: DropDownMenuItemProps) {
   return (
     <li>
       <a
@@ -9,17 +14,12 @@ export const DropDownMenuItem = ({ name, href }: DropDownMenuItem) => {
       </a>
     </li>
   );
-};
-
-interface DropDownMenuItem {
-  name: string;
-  href?: string;
 }
 
-export const DropDownMenuDivider = () => {
+export function DropDownMenuDivider() {
   return (
     <li>
       <hr className="h-0 my-2 overflow-hidden opacity-100 border-t border-t-solid border-t-primary" />
     </li>
   );
-};
+}

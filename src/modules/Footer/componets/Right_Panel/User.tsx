@@ -1,14 +1,12 @@
-import { FormInput } from "../../../Components/FormInput";
+import FormInput from '../../../Components/FormInput';
 
-const UserFormFooter = () => {
+function UserFormFooter() {
   return (
-    <>
-      <div className="w-full lg:w-[300px] h-fit flex flex-wrap">
-        <FormInput type={"text"} label={"Nombre"} />
-        <FormInput type={"text"} label={"Email"} />
-      </div>
-    </>
+    <div className="w-full lg:w-[300px] h-fit flex flex-wrap">
+      <FormInput type="text" id="nombreInpu" label="Nombre" />
+      <FormInput type="text" id="emailInpu" label="Email" />
+    </div>
   );
-};
+}
 
 export default UserFormFooter;

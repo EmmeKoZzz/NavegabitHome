@@ -1,7 +1,7 @@
-import {LPFooterButton, LPFooterUl} from "./LFooterComponets";
-import {LinkSecondary} from "../../../Components/Links";
+import LinkSecondary from '../../../Components/Links';
+import { LPFooterButton, LPFooterUl } from './LFooterComponets';
 
-const PopApps_NLeft_Footer = () =>{
+function RightPanelFooter() {
   return (
     <>
       <LPFooterButton>Aplicaciones Populares</LPFooterButton>
@@ -51,30 +51,18 @@ const PopApps_NLeft_Footer = () =>{
           </LinkSecondary>
         </li>
         <li className="mr-[1rem]" data-order="9">
-          <LinkSecondary
-            href="https://www.hubspot.es/products/sales/email-templates-sales"
-            data-order="9"
-            data-linkorder="9"
-            data-ga_nav_type="footer_nav"
-            data-ga_nav_tree_text="Funciones populares > Plantillas de emails de ventas"
-          >
+          <LinkSecondary href="https://www.hubspot.es/products/sales/email-templates-sales">
             Plantillas de emails de ventas
           </LinkSecondary>
         </li>
         <li className="mr-[1rem]" data-order="14">
-          <LinkSecondary
-            href="https://www.hubspot.es/products/marketing/analytics"
-            data-order="14"
-            data-linkorder="14"
-            data-ga_nav_type="footer_nav"
-            data-ga_nav_tree_text="Funciones populares > Analíticas de marketing"
-          >
+          <LinkSecondary href="https://www.hubspot.es/products/marketing/analytics">
             Analíticas de marketing
           </LinkSecondary>
         </li>
       </LPFooterUl>
     </>
-  )
+  );
 }
 
-export default PopApps_NLeft_Footer;
+export default RightPanelFooter;

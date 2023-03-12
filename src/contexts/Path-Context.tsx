@@ -1,4 +1,11 @@
-import {createContext, Dispatch, ReactNode, SetStateAction, useState,} from "react";
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useMemo,
+  useState,
+} from 'react';
 
 interface PathContextInterface {
   path: string;
@@ -6,8 +13,8 @@ interface PathContextInterface {
 }
 
 const defaultPath = {
-  path: "test",
-  setPath: (path: string) => {},
+  path: 'test',
+  setPath: () => {},
 } as PathContextInterface;
 
 export const PathContext = createContext(defaultPath);
@@ -16,14 +23,13 @@ type PathProviderProps = {
   children: ReactNode;
 };
 
-const PathProvider = ({ children }: PathProviderProps) => {
+function PathProvider({ children }: PathProviderProps) {
   const [path, setPath] = useState(defaultPath.path);
+  const pathDefault = useMemo(() => ({ path, setPath }), [path]);
 
   return (
-    <PathContext.Provider value={{ path, setPath }}>
-      {children}
-    </PathContext.Provider>
+    <PathContext.Provider value={pathDefault}>{children}</PathContext.Provider>
   );
-};
+}
 
 export default PathProvider;
