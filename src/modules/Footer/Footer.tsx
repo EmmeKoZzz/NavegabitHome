@@ -1,8 +1,8 @@
 import logoLight from '../../assets/Logos/dark.webp';
 import PrimaryButton from '../Components/Buttons';
 import LinkSecondary from '../Components/Links';
-import LeftPanelFooter from './componets/Left_Panel/LeftPanelFooter';
-import RightPanelFooter from './componets/Left_Panel/RightPanelFooter';
+import DownSideLeftPanel from './componets/Left_Panel/DownSide';
+import UpSide from './componets/Left_Panel/UpSide';
 import IssueFormFooter from './componets/Right_Panel/Issue';
 import UserFormFooter from './componets/Right_Panel/User';
 
@@ -16,8 +16,8 @@ function Footer() {
 							{/* Left Panel */}
 							<div className="Panel">
 								<section className="py-[0.45rem] lg:text-left lg:border-r lg:border-b-0 border-r-0 border-b  border-[#7691ad] relative flex flex-wrap flex-col flex-shrink-0 basis-[17%] flex-grow-[1]">
-									<RightPanelFooter />
-									<LeftPanelFooter />
+									<UpSide />
+									<DownSideLeftPanel />
 								</section>
 							</div>
 							{/* / Left Panel */}

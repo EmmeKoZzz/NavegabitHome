@@ -1,7 +1,7 @@
 import LinkSecondary from '../../../Components/Links';
 import { LPFooterButton, LPFooterUl } from './LFooterComponets';
 
-function LeftPanelFooter() {
+function DownSideLeftPanel() {
 	return (
 		<>
 			<div className="py-[0.45rem] border-b lg:border-0 border-[#7691ad]">
@@ -20,4 +20,4 @@ function LeftPanelFooter() {
 	);
 }
 
-export default LeftPanelFooter;
+export default DownSideLeftPanel;

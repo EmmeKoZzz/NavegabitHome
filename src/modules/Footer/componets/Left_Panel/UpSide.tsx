@@ -1,7 +1,7 @@
 import LinkSecondary from '../../../Components/Links';
 import { LPFooterButton, LPFooterUl } from './LFooterComponets';
 
-function RightPanelFooter() {
+function UpSide() {
 	return (
 		<>
 			<LPFooterButton>Aplicaciones Populares</LPFooterButton>
@@ -65,4 +65,4 @@ function RightPanelFooter() {
 	);
 }
 
-export default RightPanelFooter;
+export default UpSide;
