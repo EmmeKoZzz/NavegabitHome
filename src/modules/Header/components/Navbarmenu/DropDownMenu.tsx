@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import { DropDownMenuDivider, DropDownMenuItem } from './DropDownMenuItems';
-import { styleFont, styleNavBarItem } from './NavBarItem';
 
 function DropDownMenu() {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -24,9 +23,8 @@ function DropDownMenu() {
   return (
     <li className="navbaritem">
       <a
-        href="/"
-        // ASEREE no habia un flechita por ahi en alguna parte??? tenian q meter la flechita con CSS estan de madre ustedes en fin ya la arregle
-        className={`${styleNavBarItem} ${styleFont} whitespace-nowrap after:inline-block after:align-[0.2rem] after:content-[""] after:border-[0.35rem] after:border-solid after:border-x-transparent after:border-b-0`}
+        href="#"
+        className={`NavBarItem NavBarFont whitespace-nowrap after:inline-block after:align-[0.2rem] after:content-[""] after:border-[0.35rem] after:border-solid after:border-x-transparent after:border-b-0`}
         onClick={handleClick}
         ref={serviceButton}
       >

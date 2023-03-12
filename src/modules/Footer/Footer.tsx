@@ -7,8 +7,6 @@ import IssueFormFooter from './componets/Right_Panel/Issue';
 import UserFormFooter from './componets/Right_Panel/User';
 
 function Footer() {
-  const panelStyle = 'w-full lg:w-1/2 lg:flex lg:flex-row';
-
   return (
     <section>
       <div className="flex flex-wrap text-white">
@@ -16,7 +14,7 @@ function Footer() {
           <div className="box-content block align-baseline max-w-full mx-[5rem]">
             <nav className="lg:flex lg:flex-row lg:flex-wrap lg:w-full lg:mb-[1.65em]">
               {/* Left Panel */}
-              <div className={panelStyle}>
+              <div className="Panel">
                 <section className="py-[0.45rem] lg:text-left lg:border-r lg:border-b-0 border-r-0 border-b  border-[#7691ad] relative flex flex-wrap flex-col flex-shrink-0 basis-[17%] flex-grow-[1]">
                   <RightPanelFooter />
                   <LeftPanelFooter />
@@ -25,7 +23,7 @@ function Footer() {
               {/* / Left Panel */}
 
               {/* Right Panel */}
-              <div className={panelStyle}>
+              <div className="Panel">
                 <div className="w-full h-full lg:flex flex-wrap lg:pl-9">
                   <form className="h-full py-2">
                     <UserFormFooter />

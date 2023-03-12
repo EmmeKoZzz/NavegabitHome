@@ -2,7 +2,7 @@ function NavBarSearch() {
   return (
     <form action="" role="search" className="w-4/5 flex py-4">
       <input
-        type="serach"
+        type="seach"
         placeholder="Search"
         aria-label="Search"
         className="mr-2 block w-full py-1.5 px-3 text-base font-normal text-[#212529] bg-white bg-clip-padding	border border-solid border-[#ced4da] rounded-md transition-all"

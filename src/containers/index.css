@@ -25,9 +25,16 @@
 }
 
 .NavBarFont{
-  @apply font-[Telegraf] text-white text-lg border-b border-transparent'
+  @apply font-[Telegraf] text-white text-lg border-b border-transparent
 }
 
+.NavBarItem{
+  @apply lg:px-2 block px-0 my-2 no-underline transition-all hover:underline cursor-pointer
+}
+
+.Panel{
+  @apply w-full lg:w-1/2 lg:flex lg:flex-row
+}
 
 body,
 HTML {
