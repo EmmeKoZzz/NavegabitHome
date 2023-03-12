@@ -28,7 +28,7 @@ function DropDownMenu() {
         onClick={handleClick}
         ref={serviceButton}
       >
-        {' Servicios '}
+        Servicios
       </a>
       {/* DropDownMenu */}
       {showDropDown && (

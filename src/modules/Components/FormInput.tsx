@@ -16,7 +16,6 @@ function FormInput({
   labelStyle,
 }: FormInputProps) {
   const style = `inputStyle ${inputStyle}`;
-
   const input =
     type === 'textarea' ? (
       <textarea placeholder={placeholder} id={id} className={style} />
