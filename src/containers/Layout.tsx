@@ -1,15 +1,15 @@
-import React from "react";
-import {Outlet} from "react-router-dom";
-import PathProvider from "../contexts/Path-Context";
+import { Outlet } from 'react-router-dom';
+import PathProvider from '../contexts/Path-Context';
 
-const Layout = () => {
+function Layout() {
   return (
     <>
       <PathProvider>
+        <div />
       </PathProvider>
       <Outlet />
     </>
   );
-};
+}
 
 export default Layout;
