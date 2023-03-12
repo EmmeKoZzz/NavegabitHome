@@ -5,7 +5,7 @@ function DropDownMenu() {
   const [showDropDown, setShowDropDown] = useState(false);
 
   const dropMenu = useRef<HTMLUListElement>(null);
-  const serviceButton = useRef<HTMLAnchorElement>(null);
+  const serviceButton = useRef<HTMLButtonElement>(null);
 
   const handleClick = () => {
     setShowDropDown(true);
@@ -22,14 +22,14 @@ function DropDownMenu() {
 
   return (
     <li className="navbaritem">
-      <a
-        href="#"
+      <button
+        type="button"
         className={`NavBarItem NavBarFont whitespace-nowrap after:inline-block after:align-[0.2rem] after:content-[""] after:border-[0.35rem] after:border-solid after:border-x-transparent after:border-b-0`}
         onClick={handleClick}
         ref={serviceButton}
       >
         Servicios
-      </a>
+      </button>
       {/* DropDownMenu */}
       {showDropDown && (
         <ul
