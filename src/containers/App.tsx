@@ -5,13 +5,13 @@ import Home from '../pages/Home/Home.index';
 // aqui van todos los tipos de provider
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Home />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<Home />
+			<Footer />
+		</>
+	);
 }
 
 export default App;

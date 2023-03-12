@@ -1,15 +1,15 @@
 import { AnchorHTMLAttributes } from 'react';
 
 function LinkSecondary({
-  href,
-  className,
-  children,
+	href,
+	className,
+	children,
 }: AnchorHTMLAttributes<string>) {
-  return (
-    <a href={href} className={`text-footer-text hover:underline ${className}`}>
-      {children}
-    </a>
-  );
+	return (
+		<a href={href} className={`text-footer-text hover:underline ${className}`}>
+			{children}
+		</a>
+	);
 }
 
 export default LinkSecondary;
